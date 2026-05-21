@@ -1,1 +1,0 @@
-# gdkp-bidding
