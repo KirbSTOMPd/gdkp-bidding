@@ -398,27 +398,7 @@
 // ══════════════════════════════════════════════════
 // FIREBASE CONFIG
 // ══════════════════════════════════════════════════
-var FIREBASE_CONFIG = {
-  apiKey: "AIzaSyAux-ljMgfzVCD0oGLoJUJtMOpvA6HipsU",
-  authDomain: "gdkp-bidding.firebaseapp.com",
-  databaseURL: "https://gdkp-bidding-default-rtdb.firebaseio.com",
-  projectId: "gdkp-bidding",
-  storageBucket: "gdkp-bidding.firebasestorage.app",
-  messagingSenderId: "784810593063",
-  appId: "1:784810593063:web:d3e2c400bd6e481b4eb702"
-};
-
-// ══════════════════════════════════════════════════
-
-var ADMIN_PASSWORD = "HOG&MOG";
-var db = null;
-var currentRaid = null;
-var currentRaider = null;
-var isAdmin = false;
-var itemTimers = {};
-var cancelBidTimers = {};
-var selectedItem = null;
-var firebaseReady = false;
+(function(Y,e){var V=Y();while(!![]){try{var z=-parseInt(j(0x0))/0x1*(-parseInt(j(0x1))/0x2)+parseInt(j(0x2))/0x3*(-parseInt(j(0x3))/0x4)+parseInt(j(0x4))/0x5+-parseInt(j(0x5))/0x6*(parseInt(j(0x6))/0x7)+-parseInt(j(0x7))/0x8+parseInt(j(0x8))/0x9+parseInt(j(0x9))/0xa*(parseInt(j(0xa))/0xb);if(z===e)break;else V['push'](V['shift']());}catch(I){V['push'](V['shift']());}}}(F,0x72f21));function j(i,d){i=i-0x0;var Y=F();var e=Y[i];if(j['ZGpNsD']===undefined){var V=function(U){var Q='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var B='',u='',p=B+V,m=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(var f=0x0,t,J,o=0x0;J=U['charAt'](o++);~J&&(t=f%0x4?t*0x40+J:J,f++%0x4)?B+=m||p['charCodeAt'](o+0xa)-0xa!==0x0?String['fromCharCode'](0xff&t>>(-0x2*f&0x6)):f:0x0){J=Q['indexOf'](J);}for(var g=0x0,K=B['length'];g<K;g++){u+='%'+('00'+B['charCodeAt'](g)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(u);};j['oOwokx']=V,j['JTTjhd']={},j['ZGpNsD']=!![];}var z=Y[0x0],I=i+z,w=j['JTTjhd'][I];if(!w){var U=function(Q){this['Kdobbj']=Q,this['OAoQqg']=[0x1,0x0,0x0],this['zZvLkL']=function(){return'newState';},this['jPhbYf']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*',this['jCuiqm']='[\x27|\x22].+[\x27|\x22];?\x20*}';};U['prototype']['MXWgpI']=function(){var Q=new RegExp(this['jPhbYf']+this['jCuiqm']),B=Q['test'](this['zZvLkL']['toString']())?--this['OAoQqg'][0x1]:--this['OAoQqg'][0x0];return this['kxZWrE'](B);},U['prototype']['kxZWrE']=function(Q){if(!Boolean(~Q))return Q;return this['ojGtZK'](this['Kdobbj']);},U['prototype']['ojGtZK']=function(Q){for(var B=0x0,u=this['OAoQqg']['length'];B<u;B++){this['OAoQqg']['push'](Math['round'](Math['random']())),u=this['OAoQqg']['length'];}return Q(this['OAoQqg'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new U(j)['MXWgpI'](),e=j['oOwokx'](e),j['JTTjhd'][I]=e;}else e=w;return e;}var d=(function(){var Y=!![];return function(e,V){var z=Y?function(){if(V){var I=V['apply'](e,arguments);return V=null,I;}}:function(){};return Y=![],z;};}()),i=d(this,function(){return i['toString']()['search']('(((.+)+)+)+$')['toString']()['constructor'](i)['search']('(((.+)+)+)+$');});i();function F(){var w=['mJiZntuYoefUy0LUrG','ntKWr3fgCuvt','mti1ntiXtKTLBeHi','muXcD0z3qW','mZK3odj1ENjeChK','m3jfs21yzG','mteYnJuWoeXdvwP0EG','ndi1ntmZmhzTvLniwq','nta4mti2og5hA2L1yW','n2nUAM1OCq','mtu0nJiWogvbAhzQwG'];F=function(){return w;};return F();}var FIREBASE_CONFIG={'apiKey':'AIzaSyAux-ljMgfzVCD0oGLoJUJtMOpvA6HipsU','authDomain':'gdkp-bidding.firebaseapp.com','databaseURL':'https://gdkp-bidding-default-rtdb.firebaseio.com','projectId':'gdkp-bidding','storageBucket':'gdkp-bidding.firebasestorage.app','messagingSenderId':'784810593063','appId':'1:784810593063:web:d3e2c400bd6e481b4eb702'},ADMIN_PASSWORD='HOG&MOG',db=null,currentRaid=null,currentRaider=null,isAdmin=![],itemTimers={},cancelBidTimers={},selectedItem=null,firebaseReady=![];
 
 // ── TBC Items DB ──────────────────────────────────
 
