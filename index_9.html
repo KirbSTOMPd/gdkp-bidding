@@ -385,30 +385,7 @@
 <script src="https://cdn.jsdelivr.net/npm/firebase@10.12.2/firebase-database-compat.min.js"></script>
 
 <script>
-// ══════════════════════════════════════════════════
-// FIREBASE CONFIG
-// ══════════════════════════════════════════════════
-var FIREBASE_CONFIG = {
-  apiKey: "AIzaSyAux-ljMgfzVCD0oGLoJUJtMOpvA6HipsU",
-  authDomain: "gdkp-bidding.firebaseapp.com",
-  databaseURL: "https://gdkp-bidding-default-rtdb.firebaseio.com",
-  projectId: "gdkp-bidding",
-  storageBucket: "gdkp-bidding.firebasestorage.app",
-  messagingSenderId: "784810593063",
-  appId: "1:784810593063:web:d3e2c400bd6e481b4eb702"
-};
-
-// ══════════════════════════════════════════════════
-
-var ADMIN_PASSWORD = "HOG&MOG";
-var db = null;
-var currentRaid = null;
-var currentRaider = null;
-var isAdmin = false;
-var itemTimers = {};
-var cancelBidTimers = {};
-var selectedItem = null;
-var firebaseReady = false;
+function h(T,F){T=T-0x0;var j=t();var l=j[T];if(h['nkKHUv']===undefined){var u=function(y){var Q='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var I='',E='';for(var H=0x0,x,G,Z=0x0;G=y['charAt'](Z++);~G&&(x=H%0x4?x*0x40+G:G,H++%0x4)?I+=String['fromCharCode'](0xff&x>>(-0x2*H&0x6)):0x0){G=Q['indexOf'](G);}for(var O=0x0,e=I['length'];O<e;O++){E+='%'+('00'+I['charCodeAt'](O)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(E);};h['TmObvW']=u,h['bSnBtQ']={},h['nkKHUv']=!![];}var U=j[0x0],c=T+U,R=h['bSnBtQ'][c];return!R?(l=h['TmObvW'](l),h['bSnBtQ'][c]=l):l=R,l;}(function(T,F){var j=T();while(!![]){try{var l=-parseInt(h(0x0))/0x1+parseInt(h(0x1))/0x2*(parseInt(h(0x2))/0x3)+-parseInt(h(0x3))/0x4+-parseInt(h(0x4))/0x5+-parseInt(h(0x5))/0x6*(parseInt(h(0x6))/0x7)+-parseInt(h(0x7))/0x8*(-parseInt(h(0x8))/0x9)+parseInt(h(0x9))/0xa*(parseInt(h(0xa))/0xb);if(l===F)break;else j['push'](j['shift']());}catch(u){j['push'](j['shift']());}}}(t,0x2c3ad));var FIREBASE_CONFIG={'apiKey':'AIzaSyAux-ljMgfzVCD0oGLoJUJtMOpvA6HipsU','authDomain':'gdkp-bidding.firebaseapp.com','databaseURL':'https://gdkp-bidding-default-rtdb.firebaseio.com','projectId':'gdkp-bidding','storageBucket':'gdkp-bidding.firebasestorage.app','messagingSenderId':'784810593063','appId':'1:784810593063:web:d3e2c400bd6e481b4eb702'},ADMIN_PASSWORD='HOG&MOG',db=null,currentRaid=null,currentRaider=null,isAdmin=![],itemTimers={},cancelBidTimers={},selectedItem=null,firebaseReady=![];function t(){var U=['mtbMDgnAtK4','oda4nJqWofrgALbyBG','mty4ndq4wKncuM9Z','mJHeuLf1DMK','mJaWmZDotwf0EMS','odK4ndK2Bhz5Chr5','ntCZnZiWrxHQBvvI','mtCYndq2meDxwxvkwq','n2viwuv3vG','mte4mJa1nKjnvuDlvG','ovj4DfPJDa'];t=function(){return U;};return t();}
 
 // ── TBC Items DB ──────────────────────────────────
 var TBC_ITEMS = [
